@@ -5,6 +5,7 @@ public class Findandreplace {
 
   public static String replaceWordInSentence(String sentence, String originalWord, String newWord) {
 
+    originalWord = "(?i)"+originalWord;
     String newSentence = sentence.replaceAll(originalWord, newWord);
 
     // String[] sentenceArray = sentence.split(" ");

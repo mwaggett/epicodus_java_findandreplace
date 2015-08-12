@@ -29,6 +29,13 @@ public class FindandreplaceTest extends FluentTest {
     assertEquals(expValue, replace.replaceWordInSentence("I am walking my cat to the cathedral", "cat", "dog"));
   }
 
+  @Test
+  public void replaceWordInSentence_ignoreCase_true(){
+    Findandreplace replace = new Findandreplace();
+    String expValue = "I am walking my dog to the doghedral";
+    assertEquals(expValue, replace.replaceWordInSentence("I am walking my cAt to the Cathedral", "cat", "dog"));
+  }
+
   @ClassRule
   public static ServerRule server = new ServerRule();
 }
